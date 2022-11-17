@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'gtfri';
+    src: url('./assets/webfonts/mateifont/GT-Flexa-Regular-Italic-Trial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'gtfr';
+    src: url('./assets/webfonts/mateifont/GT-Flexa-Regular-Trial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gtfxebl';
+    src: url('./assets/webfonts/mateifont/GT-Flexa-X-Compressed-Black-Trial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gtfxebo';
+    src: url('./assets/webfonts/mateifont/GT-Flexa-X-Expanded-Black-Trial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+*, *::before, *::after {    
+    margin: 0;    
+    padding: 0;    
+    box-sizing: border-box;    
+    list-style: none;    
+    text-decoration: none;
+    scroll-behavior: auto !important;
+    /* border: 1px solid white; */
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+    font-family: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #000431;
+    color: #FFF500;
+    border: 7px solid #FFF500;
+    margin: 4.5rem;
+}
+
+header {
+    margin-top: -1rem;
+}
+
+.headline {
+    border-bottom: 7px solid #FFF500;
+    overflow: hidden;
+}
+
+.scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(115%);
+    animation: ScrollRtoL 45s linear infinite;
+    white-space: nowrap;
+    width: 100%;
+    margin: -1rem auto -1rem;
+}
+
+.scroll:hover {
+    animation-play-state: paused;
+}
+
+.headline h1 {
+    font-size: 16rem;
+    margin-right: 5rem;
+    font-family: 'gtfxebl';
+}
+
+.headline h1:nth-child(2n) {
+    color: #000431;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFF500;
+}
+
+@keyframes ScrollRtoL {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.baseline {
+    border-bottom: 7px solid #FFF500;
+    overflow: hidden;
+}
+
+.scroll-txt {
+    display: flex;
+    transform: translateX(-100%);
+    animation: ScrollLtoR 50s linear infinite;
+    white-space: nowrap;
+    padding: 1rem 0;
+    justify-content: center;
+}
+
+.scroll-txt:hover {
+    animation-play-state: paused;
+}
+
+@keyframes ScrollLtoR {
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.baseline h2 {
+    font-size: 4.7rem;
+    margin-right: 1rem;
+    font-family: 'gtfxebl';
+}
+
+.baseline h2:nth-child(2n) {
+    color: #000431;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFF500;
+}
+
+/* Main content */
+
+main {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0 0rem;
+    gap: 7.5rem;
+}
+
+.img {
+    position: relative;
+    overflow: hidden;
+}
+
+.img img {
+    margin-left: 3rem;
+    width: 100%;
+    max-width: 70rem;
+    min-height: 100%;
+}
+
+.circle {
+    width: 51rem;
+    height: 51rem;
+    border-radius: 50%;
+    background: #FFF500;
+    position: absolute;
+    z-index: -1;
+    margin: 1.5rem 0 0 3.5rem;
+}
+
+.lil-circle {
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    background: #FFF500;
+    position: absolute;
+    top: 42.6rem;
+    left: 43.4rem;
+    z-index: 1000;
+}
+
+.container {
+    width: 100%;
+    max-width: 30%;
+    margin-right: 2.5rem;
+}
+
+.container p {
+    font-size: 1.8rem;
+    font-family: 'gtfr';
+    line-height: 28px;
+}
+
+.container p:nth-child(1), .container p:nth-child(2) {
+    margin-bottom: 4rem;
+}
+
+.container i {
+    font-weight: 600;
+}
+
+.container u {
+    border-bottom: 1px solid #FFF500;
+}
+
+.wrap-mail {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+span {
+    font-size: 1.8rem;
+    font-family: 'gtfr';
+}
+
+.container img {
+    width: 33.5px;
+    margin-right: 1rem;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1310px) {
+
+    main {
+        justify-content: center;
+    }
+
+    .container {
+        max-width: 50%;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    body {
+        margin: 2rem;
+    }
+
+    .img img {
+        max-width: 60rem;
+        min-height: 100%;
+    }
+
+    .circle {
+        width: 40rem;
+    height: 40rem;
+    }
+
+    .lil-circle {
+        width: 4rem;
+    height: 4rem;
+        top: 36.5rem;
+        left: 38.5rem;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    .wrap-mail {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
